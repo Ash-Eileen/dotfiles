@@ -8,13 +8,21 @@ Pop them in your root file!
 
 ### Vim
 
+#### Linux
+
 ```bash
  sudo apt-get install vim
 ```
 
-### Nvim
+#### Mac
 
-#### Windows
+```bash
+brew install vim
+```
+
+### NeoVim
+
+#### Linux
 
 ```bash
 sudo apt install neovim
