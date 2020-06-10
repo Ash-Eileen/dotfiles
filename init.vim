@@ -31,6 +31,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dracula/vim'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+Plug 'mattn/emmet-vim'
 
 call plug#end() 
 
