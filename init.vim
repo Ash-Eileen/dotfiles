@@ -14,8 +14,10 @@ set undofile
 set incsearch
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set termguicolors
-
 set cmdheight=2
+
+set textwidth=79
+set colorcolumn=80
 
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
@@ -84,6 +86,8 @@ nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <Leader>ps :Rg<SPACE>
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
+inoremap kj <Esc>
+nnoremap <leader>w <C-w>v<C-w>l
 
 nmap <leader>gd <Plug>(coc-definition)
 
