@@ -6,6 +6,7 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set nu
+set rnu
 set smartcase
 set noswapfile
 set nobackup
@@ -36,12 +37,15 @@ Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'mattn/emmet-vim'
 Plug 'gruvbox-community/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end() 
 
 colorscheme dracula
-let g:gruvbox_contrast_dark = 'hard'
 set background=dark
+
+let g:airline_powerline_fonts = 1
 
 " --- vim go (polyglot) settings.
 let g:go_highlight_build_constraints = 1
