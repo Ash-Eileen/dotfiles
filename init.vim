@@ -37,7 +37,7 @@ Plug 'gruvbox-community/gruvbox'
 
 call plug#end() 
 
-colorscheme gruvbox
+colorscheme dracula
 let g:gruvbox_contrast_dark = 'hard'
 set background=dark
 
