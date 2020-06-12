@@ -95,3 +95,7 @@ nnoremap <leader>w <C-w>v<C-w>l
 
 nmap <leader>gd <Plug>(coc-definition)
 
+" Fugitive settings
+nmap <leader>gh :diffget //3<CR>
+nmap <leader>gu :diffget //2<CR>
+nmap <leader>gs :G<CR>
