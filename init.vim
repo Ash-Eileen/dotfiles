@@ -1,5 +1,6 @@
 syntax on
 
+" Defaults for settings. Some random stuff
 set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -16,27 +17,35 @@ set incsearch
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set termguicolors
 set cmdheight=2
+set splitbelow
 
+" Defaults for how columns display. Also adds line to show length.
 set textwidth=79
 set colorcolumn=80
-
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
+" Oooh plugins!! 
 call plug#begin('~/.vim/plugged')
 
+" That sweet surround option for when I mess up brackets and then some
+" autocomplete
+Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Git integration, manuals and then the undotree and emmet
 Plug 'tpope/vim-fugitive'
 Plug 'vim-utils/vim-man'
 Plug 'mbbill/undotree'
+Plug 'mattn/emmet-vim'
+" Language pack then fzf, wakatime and themes
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'wakatime/vim-wakatime'
+Plug 'gruvbox-community/gruvbox'
 Plug 'dracula/vim'
+" Nerdtree for easy file navigation (icons for visuals) and then airline
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
-Plug 'mattn/emmet-vim'
-Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -67,12 +76,11 @@ if executable('rg')
     let g:rg_derive_root='true'
 endif
 
+" Leader key. Comment for attention.
 let mapleader = " "
 
-let g:netrw_browse_split = 2
-let g:netrw_banner = 0
-let g:netrw_winsize = 25
-
+" Nerdtree settings
+let g:NERDTreeWinSize = 25
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
@@ -82,6 +90,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Toggle
 nnoremap <leader>pv :execute 'NERDTreeToggle ' . getcwd()<CR>
 
+" Navigation remaps
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
@@ -90,10 +99,14 @@ nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <Leader>ps :Rg<SPACE>
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
-inoremap kj <Esc>
-nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <leader>v :vsplit<CR>
+nnoremap <leader>w :split<CR>
 
+" Go to definition
 nmap <leader>gd <Plug>(coc-definition)
+
+" Escape in insert mode
+inoremap kj <Esc>
 
 " Fugitive settings
 nmap <leader>gh :diffget //3<CR>
