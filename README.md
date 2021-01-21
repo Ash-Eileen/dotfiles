@@ -1,4 +1,6 @@
-# My Vim and Neovim Dotfiles and Settings
+# Dotfiles and Settings
+
+## Nvim and Vim
 
 ## Basics
 
@@ -51,4 +53,22 @@ vim +PlugInstall
 
 ```bash
 nvim +PlugInstall
+```
+
+## VSCode
+
+Settings for vscode live in settings.json.
+
+Extension list is in extensions.list.
+
+To generate a new extensions list run
+
+```bash
+code --list-extensions > extensions.list
+```
+
+To add the extensions to VSCode run
+
+```bash
+cat extensions.txt | xargs code --list-extensions {}
 ```
