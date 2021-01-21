@@ -1,0 +1,22 @@
+[user]
+	email = ash.mash.134@gmail.com
+	name = Ashley Smith
+[core]
+	excludesfile = /home/ash/.gitignore
+[alias]
+	co = checkout
+	cob = checkout -b
+	ac = !git add -A && git commit -m
+	undo = reset HEAD~1 --mixed
+	p = push
+	pl = pull
+	po = push origin
+	plo = pull origin
+	pom = push origin master
+	plom = pull origin master
+	s = status
+	a = add
+	cm = commit -m
+	com = checkout master
+	b = branch
+	l = log --graph --decorate --pretty=oneline --abbrev-commit
