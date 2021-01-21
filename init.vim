@@ -2,8 +2,8 @@ syntax on
 
 " Defaults for settings. Some random stuff
 set noerrorbells
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+set tabstop=2 softtabstop=2
+set shiftwidth=2
 set expandtab
 set smartindent
 set nu
@@ -11,14 +11,9 @@ set rnu
 set smartcase
 set noswapfile
 set nobackup
-set undodir=~/.vim/undodir
-set undofile
 set incsearch
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 set termguicolors
 set cmdheight=2
-set splitbelow
-
 " Defaults for how columns display. Also adds line to show length.
 set textwidth=79
 set colorcolumn=80
@@ -43,16 +38,19 @@ Plug 'junegunn/fzf.vim'
 Plug 'wakatime/vim-wakatime'
 Plug 'gruvbox-community/gruvbox'
 Plug 'dracula/vim'
+Plug 'jacoborus/tender.vim'
 " Nerdtree for easy file navigation (icons for visuals) and then airline
-Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 call plug#end() 
 
+" Fairyfloss is downloaded in colors folder (not PlugIn)
 colorscheme dracula
 set background=dark
+
+let g:airline_theme='violet'
 
 let g:airline_powerline_fonts = 1
 
@@ -76,19 +74,15 @@ if executable('rg')
     let g:rg_derive_root='true'
 endif
 
+let g:netrw_browse_split = 2
+let g:netrw_banner = 0
+let g:netrw_winsize = 25
+let g:netrw_localrmdir='rm -r'
+
 " Leader key. Comment for attention.
 let mapleader = " "
-
-" Nerdtree settings
-let g:NERDTreeWinSize = 25
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeIgnore = []
-let g:NERDTreeStatusline = ''
-" Automaticaly close nvim if NERDTree is only thing left open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" Toggle
-nnoremap <leader>pv :execute 'NERDTreeToggle ' . getcwd()<CR>
+  
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 
 " Navigation remaps
 nnoremap <leader>h :wincmd h<CR>
@@ -99,7 +93,7 @@ nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <Leader>ps :Rg<SPACE>
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
-nnoremap <leader>v :vsplit<CR>
+nnoremap <leader>m :vsplit<CR>
 nnoremap <leader>w :split<CR>
 
 " Go to definition
