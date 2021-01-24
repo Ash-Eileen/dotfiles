@@ -123,4 +123,5 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
+    "vim.handleKeys": { "<C-f>": false }
 }
