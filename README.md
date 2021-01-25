@@ -70,5 +70,5 @@ code --list-extensions > extensions.list
 To add the extensions to VSCode run
 
 ```bash
-cat extensions.txt | xargs code --list-extensions {}
+cat extensions.list | xargs -L 1 code --install-extension
 ```
