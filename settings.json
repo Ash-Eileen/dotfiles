@@ -1,5 +1,5 @@
 {
-    "workbench.startupEditor": "newUntitledFile",
+    "workbench.startupEditor": "welcomePage",
     "workbench.colorTheme": "Celestial",
     "workbench.settings.useSplitJSON": true,
     "workbench.settings.editor": "json",
@@ -8,7 +8,6 @@
     "breadcrumbs.enabled": true,
     "explorer.openEditors.visible": 0,
     "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
-    "window.zoomLevel": 1,
     "editor.wordWrap": "on",
     "files.autoSave": "afterDelay",
     "bracket-pair-colorizer-2.colors": [
@@ -52,7 +51,8 @@
     "workbench.colorCustomizations": {
         "terminal.ansiBrightGreen": "#FF79C6",
         "terminal.ansiBrightBlue": "#8BE9FD",
-
+        "editorLineNumber.foreground": "#79b26b",
+        "editorLineNumber.activeForeground": "#864d94",
     },
     "vim.camelCaseMotion.enable": true,
     "terminal.integrated.rendererType": "dom",
@@ -123,5 +123,8 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
-    "vim.handleKeys": { "<C-f>": false }
+    "vim.handleKeys": {
+        "<C-f>": false
+    },
+    "workbench.sideBar.location": "right"
 }

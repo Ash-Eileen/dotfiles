@@ -19,7 +19,7 @@ set textwidth=79
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
-" Oooh plugins!! 
+" Oooh plugins!!
 call plug#begin('~/.vim/plugged')
 
 " That sweet surround option for when I mess up brackets and then some
@@ -35,7 +35,6 @@ Plug 'mattn/emmet-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'wakatime/vim-wakatime'
 Plug 'gruvbox-community/gruvbox'
 Plug 'dracula/vim'
 Plug 'jacoborus/tender.vim'
@@ -44,7 +43,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-call plug#end() 
+call plug#end()
 
 " Fairyfloss is downloaded in colors folder (not PlugIn)
 colorscheme dracula
@@ -81,7 +80,7 @@ let g:netrw_localrmdir='rm -r'
 
 " Leader key. Comment for attention.
 let mapleader = " "
-  
+
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 
 " Navigation remaps
